@@ -1,0 +1,178 @@
+/* Sprites */
+.cloud {
+	background: url(imgs/cloud.png);
+	position: absolute;
+	height: 96px;
+	width: 128px;
+	right: 25%;
+	top: 15%;
+	animation: cloud-move 20s infinite linear;
+	z-index: 1;
+}
+
+.hill {
+	background: url(imgs/hill.png);
+	margin-top: -140px;
+	position: absolute;
+	height: 140px;
+	width: 320px;
+}
+
+.bush {
+	background: url(imgs/bush.png);
+	margin-top: -64px;
+	position: absolute;
+	height: 64px;
+	width: 256px;
+}
+
+.pipe {
+	background: url(imgs/pipe.png);
+	margin-top: -64px;
+	position: absolute;
+	height: 64px;
+	width: 128px;
+}
+
+.pipe .pipe-top {
+	background: url(imgs/pipe-top.png);
+	margin-top: -64px;
+	position: absolute;
+	height: 64px;
+	width: 128px;
+}
+
+.pipe-top .flower {
+	background: url(imgs/flower-open.png);
+	margin-top: -96px;
+	position: absolute;
+	height: 96px;
+	width: 64px;
+	left: 32px;
+	animation: pipe-flower 10s infinite linear;
+}
+
+.mario {
+	background: url(imgs/mario.png);
+	margin-top: -60px;
+	position: absolute;
+	height: 64px;
+	width: 64px;
+}
+
+.goomba {
+	background: url(imgs/goomba-left.png);
+	margin-top: -64px;
+	position: absolute;
+	height: 64px;
+	width: 64px;
+}
+
+/* Styles */
+body {
+	background: #5080FF;
+	overflow: hidden;
+	width: 100%;
+}
+
+.page-footer {
+	background: url(imgs/ground.png) #C07000;
+	bottom: 0;
+	height: 128px;
+	left: 0;
+	position: fixed;
+	right: 0;
+	z-index: 2;
+}
+
+.page-footer .hill { }
+
+.page-footer .bush {
+	right: 32px;
+}
+
+.page-footer .pipe {
+	left: 40%;
+}
+
+.page-footer .goomba {
+	left: 40%;
+	margin-left: 256px;
+	animation: footer-goomba 4s infinite linear;
+}
+
+.page-footer .mario {
+	left: 160px;
+}
+
+.page-footer .attribution {
+	
+}
+
+@keyframes cloud-move {
+	0% {
+		right: -128px;
+		top: 15%;
+	}
+	10% {
+		top: 12%;
+	}
+	20% {
+		top: 16%;
+	}
+	30% {
+		top: 14%;
+	}
+	40% {
+		top: 17%;
+	}
+	50% {
+		top: 12%;
+	}
+	60% {
+		top: 15%;
+	}
+	70% {
+		top: 11%;
+	}
+	80% {
+		top: 15%;
+	}
+	90% {
+		top: 12%;
+	}
+	100% {
+		right: 100%;
+		top: 15%;
+	}
+}
+
+@keyframes pipe-flower {
+	0%, 30% {
+		margin-top: -96px;
+		height: 96px;
+	}
+	40%, 90% {
+		margin-top: 0;
+		height: 0;
+	}
+	100% {
+		margin-top: -96px;
+		height: 96px;
+	}
+}
+
+@keyframes footer-goomba {
+	0% {
+		margin-left: 256px;
+	}
+	25% {
+		margin-left: 128px;
+	}
+	75% {
+		margin-left: 384px;
+	}
+	100% {
+		margin-left: 256px;
+	}
+}
