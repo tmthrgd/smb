@@ -109,6 +109,12 @@ body {
 	
 }
 
+@media (max-width: 1230px) {
+	.page-footer .goomba {
+		display: none;
+	}
+}
+
 @keyframes cloud-move {
 	0% {
 		right: -128px;
